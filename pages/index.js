@@ -21,12 +21,14 @@ const Home = () => {
   if (typeof window !== "undefined") {
     let start = performance.now();
     // console.log({ start: performance.now() });
-    console.log("original approach", addUpTo(6));
+    console.log("original approach", addUpTo(10000));
     // console.log(performance);
     let end = performance.now();
     // console.log(`start : ${start} , end: ${end}`);
     console.log(
-      `Time taken to execute the function addUpTo , ${end - start} seconds `
+      `Time taken to execute the function addUpTo , ${
+        (end - start) / 1000
+      } seconds `
     );
   }
 
@@ -44,12 +46,14 @@ const Home = () => {
   if (typeof window !== "undefined") {
     let start = performance.now();
     // console.log({ start: performance.now() });
-    console.log("second approach", addUpTo2(10));
+    console.log("second approach", addUpTo2(10000));
     // console.log(performance);
     let end = performance.now();
     // console.log(`start : ${start} , end: ${end}`);
     console.log(
-      `Time taken to execute the function addUpTo , ${end - start} seconds `
+      `Time taken to execute the function addUpTo , ${
+        (end - start) / 1000
+      } seconds `
     );
   }
   return <div className={styles.container}>Hello World</div>;
